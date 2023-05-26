@@ -2,16 +2,13 @@ import React from "react";
 import Business from "./Business";
 import data from './BusinessData';
 
-export default function BusinessList() {
+export default function BusinessList({array}) {
     return (
         <div className="container">
             <div className="row gy-3">
-                <Business {...data} />
-                <Business {...data} />
-                <Business {...data} />
-                <Business {...data} />
-                <Business {...data} />
-                <Business {...data} />
+                {array.map((item) => 
+                    <Business {...data} />
+                )}
             </div>
         </div>
     )
