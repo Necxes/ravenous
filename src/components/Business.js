@@ -2,7 +2,7 @@ import React from "react";
 import "./Business.css";
 
 export default function Business ({ imageSrc, name, address, city, state, zipcode, category, rating, reviewCount}) {
-    return(
+    return (
         <div className="col-md-4 col-6">
             <article>
                 <img src={imageSrc} alt={name} />

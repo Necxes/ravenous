@@ -1,11 +1,10 @@
 import './App.css';
-import Business from './components/Business';
-import data from './components/BusinessData';
+import BusinessList from './components/BusinessList';
 
 function App() {
   return (
     <div className="App">
-        <Business {...data} />
+        <BusinessList />
     </div>
   );
 }
