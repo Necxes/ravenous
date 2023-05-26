@@ -1,6 +1,7 @@
 import './App.css';
 import BusinessList from './components/BusinessList';
 import Header from './components/Header';
+import SearchBar from './components/SearchBar';
 
 const array = [1,2,3,4,5]
 
