@@ -1,4 +1,5 @@
 import React from "react";
+import SearchBar from "./SearchBar";
 import "./Header.css";
 
 export default function Header() {
@@ -8,7 +9,9 @@ export default function Header() {
                 <h1>ravenous</h1>
             </div>
             <div className="container-fluid searchContainer">
-                
+                <div className="container">
+                    <SearchBar />
+                </div>
             </div>
         </header>
     )
