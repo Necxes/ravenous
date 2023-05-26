@@ -1,0 +1,19 @@
+p {
+    line-height: 1.5rem;
+}
+
+span {
+    color: #BC9D68;
+    font-weight: bold;
+}
+
+.category {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+}
+
+img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
