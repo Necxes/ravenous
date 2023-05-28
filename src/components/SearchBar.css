@@ -36,7 +36,6 @@ label {
     border-bottom: 1px solid white;
 }
 
-
 .option:has(:checked) {
     color: #BC9D68 !important;
     border-bottom: 1px solid #BC9D68;

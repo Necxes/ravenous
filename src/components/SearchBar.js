@@ -4,31 +4,64 @@ import "./SearchBar.css";
 export default function SearchBar() {
     const [business, setBusiness] = useState('');
     const [location, setLocation] = useState('');
+    const [searchBy, setSearchBy] = useState();
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        console.log(business, location, searchBy);
+    }
 
     return (        
-        <form>
+        <form onSubmit={handleSubmit}>
             <div className="row justify-content-center mb-5">
                 <div className="col-auto d-flex">
                     <div className="option position-relative">
-                        <label for="optionBestMatch">Best<br/>match</label>
-                        <input id="optionBestMatch" type="radio" name="searchBy"  value="Best Match"/>
+                        <label htmlFor="optionBestMatch">Best<br/>match</label>
+                        <input 
+                            id="optionBestMatch" 
+                            type="radio" 
+                            name="searchBy"  
+                            value="Best Match"
+                            onChange={event => setSearchBy(event.target.value)}/>
                     </div>
                     <div className="option position-relative">
-                        <label for="optionHighestRated">Highest<br/>rated</label>
-                        <input id="optionHighestRated" type="radio" name="searchBy"  value="Highest rated" />
+                        <label htmlFor="optionHighestRated">Highest<br/>rated</label>
+                        <input 
+                            id="optionHighestRated" 
+                            type="radio" 
+                            name="searchBy"  
+                            value="Highest rated"
+                            onChange={event => setSearchBy(event.target.value)} />
                     </div>
                     <div className="option position-relative">
-                        <label for="optionMostViewed">Most<br/>reviewed</label>
-                        <input id="optionMostViewed" type="radio" name="searchBy"  value="Most reviewed" />
+                        <label htmlFor="optionMostViewed">Most<br/>reviewed</label>
+                        <input 
+                            id="optionMostViewed" 
+                            type="radio" 
+                            name="searchBy"  
+                            value="Most reviewed"
+                            onChange={event => setSearchBy(event.target.value)} />
                     </div>
                 </div>
             </div>
             <div className="row mb-5">
                 <div className="col">
-                    <input id="business" className="form-control" value={business} type="text" placeholder="Search Businesses" />
+                    <input 
+                        id="business" 
+                        className="form-control" 
+                        value={business} 
+                        onChange={event => setBusiness(event.target.value)}
+                        type="text" 
+                        placeholder="Search Businesses" />
                 </div>
                 <div className="col">                                
-                    <input id="location" className="form-control" value={location} type="text" placeholder="Where?" />
+                    <input 
+                        id="location" 
+                        className="form-control"
+                        value={location} 
+                        onChange={event => setLocation(event.target.value)}
+                        type="text" 
+                        placeholder="Where?" />
                 </div>     
             </div>      
             <div className="row justify-content-center">
