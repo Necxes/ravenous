@@ -28,11 +28,20 @@ label {
     font-weight: bolder;
     color: white;
     padding: .75rem 5rem;
+    
+}
+
+.option {
+    width: 250px;
     border-bottom: 1px solid white;
 }
 
 
-.option:has(:checked) label {
-    color: #957742;
+.option:has(:checked) {
+    color: #BC9D68 !important;
     border-bottom: 1px solid #BC9D68;
+}
+
+.option:has(:checked) label {
+    color: #BC9D68 !important;
 }
