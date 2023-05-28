@@ -1,0 +1,38 @@
+.btn {
+    padding: .5rem 1rem;
+    background: #BC9D68;
+    color: #fff;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #957742;
+    color: #fff;
+}
+
+input[type="text"] {
+    padding: 1rem 1.5rem;
+}
+
+input[type="radio"] {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+label {    
+    font-weight: bolder;
+    color: white;
+    padding: .75rem 5rem;
+    border-bottom: 1px solid white;
+}
+
+
+.option:has(:checked) label {
+    color: #957742;
+    border-bottom: 1px solid #BC9D68;
+}

@@ -10,6 +10,8 @@ h1 {
 }
 
 .searchContainer {
-    background: gray;
     padding: 15% 0;
+    background: linear-gradient(rgba(0,0,0,.75) 0%, rgba(0,0,0,.5) 100%), url('https://images.unsplash.com/photo-1519077336050-4ca5cac9d64f?ixlib=rb-4.0.3');
+    background-size: cover;
+    background-position: 10%;
 }
