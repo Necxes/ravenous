@@ -8,7 +8,7 @@ export default function SearchBar() {
 
     function handleSubmit(e) {
         e.preventDefault();
-        console.log(business, location, searchBy);
+        console.log(`Searching ${business}, ${location}, ${searchBy}`);
     }
 
     return (        
@@ -21,7 +21,7 @@ export default function SearchBar() {
                             id="optionBestMatch" 
                             type="radio" 
                             name="searchBy"  
-                            value="Best Match"
+                            value="best_match"
                             onChange={event => setSearchBy(event.target.value)}/>
                     </div>
                     <div className="option position-relative">
@@ -30,7 +30,7 @@ export default function SearchBar() {
                             id="optionHighestRated" 
                             type="radio" 
                             name="searchBy"  
-                            value="Highest rated"
+                            value="highest_rated"
                             onChange={event => setSearchBy(event.target.value)} />
                     </div>
                     <div className="option position-relative">
@@ -39,7 +39,7 @@ export default function SearchBar() {
                             id="optionMostViewed" 
                             type="radio" 
                             name="searchBy"  
-                            value="Most reviewed"
+                            value="most_reviewed"
                             onChange={event => setSearchBy(event.target.value)} />
                     </div>
                 </div>

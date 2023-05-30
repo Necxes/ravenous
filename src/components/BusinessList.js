@@ -6,8 +6,8 @@ export default function BusinessList({array}) {
     return (
         <div className="container">
             <div className="row gy-3">
-                {array.map((item) => 
-                    <Business {...data} />
+                {array.map((item, index) => 
+                    <Business {...data} key={index} />
                 )}
             </div>
         </div>
