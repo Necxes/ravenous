@@ -1,15 +1,32 @@
 import './App.css';
+import { useState } from 'react';
 import BusinessList from './components/BusinessList';
-import Header from './components/Header';
-import SearchBar from './components/SearchBar';
-
-const array = [1,2,3,4,5]
+import SearchBar from "./components/SearchBar";
+import Yelp from './utils/yelp';
 
 function App() {
-  return (
+  const [businesses, setBusinesses] = useState([]);
+
+  const searchYelp = (business, location, searchBy) => {
+    console.log(`Searching Yelp with ${business}, ${location}, ${searchBy}`);
+    Yelp.search(business, location, searchBy).then((businesses) => {
+      setBusinesses(businesses);
+    });
+  };
+
+  return (    
     <div className="App">
-        <Header />
-        <BusinessList array={array} />
+      <header className="mb-5">
+            <div className="container-fluid py-3 nav">
+                <h1>ravenous</h1>
+            </div>
+            <div className="container-fluid searchContainer">
+                <div className="container">
+                    <SearchBar searchYelp={searchYelp} />
+                </div>
+            </div>
+        </header>
+        <BusinessList array={businesses} />
     </div>
   );
 }

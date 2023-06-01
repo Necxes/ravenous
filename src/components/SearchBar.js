@@ -1,14 +1,14 @@
 import React, {useState} from "react";
 import "./SearchBar.css";
 
-export default function SearchBar() {
+export default function SearchBar({ searchYelp }) {
     const [business, setBusiness] = useState('');
     const [location, setLocation] = useState('');
-    const [searchBy, setSearchBy] = useState();
+    const [searchBy, setSearchBy] = useState('');
 
     function handleSubmit(e) {
         e.preventDefault();
-        console.log(`Searching ${business}, ${location}, ${searchBy}`);
+        return searchYelp(business, location, searchBy);
     }
 
     return (        
@@ -22,7 +22,8 @@ export default function SearchBar() {
                             type="radio" 
                             name="searchBy"  
                             value="best_match"
-                            onChange={event => setSearchBy(event.target.value)}/>
+                            onChange={event => setSearchBy(event.target.value)}
+                            />
                     </div>
                     <div className="option position-relative">
                         <label htmlFor="optionHighestRated">Highest<br/>rated</label>

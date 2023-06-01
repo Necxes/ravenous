@@ -10,7 +10,7 @@ export default function Header() {
             </div>
             <div className="container-fluid searchContainer">
                 <div className="container">
-                    <SearchBar />
+                    <SearchBar searchYelp={} />
                 </div>
             </div>
         </header>

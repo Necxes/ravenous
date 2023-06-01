@@ -1,21 +1,21 @@
 import React from "react";
 import "./Business.css";
 
-export default function Business ({ imageSrc, name, address, city, state, zipcode, category, rating, reviewCount}) {
+export default function Business ({business}) {
     return (
         <div className="col-md-4 col-6">
             <article>
-                <img src={imageSrc} alt={name} />
-                <h4 className="text-start my-3">{name}</h4>
+                <img src={business.imageSrc} alt={business.name} />
+                <h4 className="text-start my-3">{business.name}</h4>
                 <div className="d-flex justify-content-between">
                     <div className="text-start">
-                        <p>{address}<br/>{city}<br />{zipcode} {state}</p>
+                        <p>{business.address}<br/>{business.city}<br />{business.zipcode} {business.state}</p>
                     </div>
                     <div className="text-end">
                         <p>
-                            <span className="category">{category}</span><br/>
-                            <span>{rating}</span><br/>
-                            {reviewCount}
+                            <span className="category">{business.category}</span><br/>
+                            <span>{business.rating}</span><br/>
+                            {business.reviewCount}
                         </p>
                     </div>
                 </div>
